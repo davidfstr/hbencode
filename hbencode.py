@@ -7,7 +7,7 @@
 # 
 # Requires: Python 2.5.1 or later
 # 
-# Author: David Foster
+# Copyright (c) 2012 David Foster
 # 
 
 import getopt
