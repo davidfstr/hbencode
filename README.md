@@ -55,8 +55,7 @@ When run for the first time:
 1. hbencode will try to locate the `HandBrakeCLI` program in your 
    current `PATH`.
 
-    * If it cannot be found, you will be prompted to input its 
-      location manually.
+   If it cannot be found, you will be prompted to input its location manually.
 
 2. hbencode will prompt you for a directory to save all output files.
 
@@ -113,7 +112,7 @@ hbencode.py
 
 ## Support
 
-I am providing this software for free and therefore providing no warranties.
+I am providing this software for free and therefore am providing no warranties.
 
 Nevertheless if you run into problems or have questions, feel free to file a
 [bug] or [contact] me.
