@@ -16,9 +16,9 @@ on the plane, or otherwise stuck waiting for long periods of time.
     * Windows &mdash; probably works, but untested
 * [Python] 2.5.1 or later
     * Already included on Mac OS X.
-* [HandBrakeCLI] svn3563 (2010100201) or later
+* [HandBrakeCLI] 0.9.5 or later
     * Tested with:
-        * HandBrakeCLI svn3563 (2010100201)
+        * HandBrakeCLI svn3563 (2010100201) - Reference implementation
         * HandBrakeCLI svn3567 (2010100301)
 
 [Python]: http://www.python.org
@@ -54,8 +54,7 @@ When run for the first time:
 
 1. hbencode will try to locate the `HandBrakeCLI` program in your 
    current `PATH`.
-
-   If it cannot be found, you will be prompted to input its location manually.
+    * If it cannot be found, you will be prompted to input its location manually.
 
 2. hbencode will prompt you for a directory to save all output files.
 
@@ -112,9 +111,7 @@ hbencode.py
 
 ## Support
 
-I am providing this software for free and therefore am providing no warranties.
-
-Nevertheless if you run into problems or have questions, feel free to file a
+If you run into problems or have questions, feel free to file a
 [bug] or [contact] me.
 
 [contact]: http://dafoster.net/about#contact
