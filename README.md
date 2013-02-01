@@ -55,7 +55,6 @@ When run for the first time:
 1. hbencode will try to locate the `HandBrakeCLI` program in your 
    current `PATH`.
     * If it cannot be found, you will be prompted to input its location manually.
-
 2. hbencode will prompt you for a directory to save all output files.
 
 ### Aspect Ratio
