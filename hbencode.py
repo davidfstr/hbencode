@@ -169,7 +169,9 @@ def main(args):
         
         # Standard iPod Touch options
         hbargs.extend(['-Z', "Apple/iPhone & iPod Touch"])
-        hbargs.extend(['-e', 'x264', '--x264opts', "cabac=0:ref=2:me=umh:bframes=0:subq=6:8x8dct=0:weightb=0"])
+        hbargs.extend(['-e', 'x264'])
+        # NOTE: HandBrake 0.9.9 does not recognize the following option anymore
+        #hbargs.extend(['--x264opts', "cabac=0:ref=2:me=umh:bframes=0:subq=6:8x8dct=0:weightb=0"])
         
         # Use high quality AAC audio encoder, since it's available on the Mac
         # 96kbit AAC audio is good quality
