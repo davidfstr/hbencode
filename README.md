@@ -130,6 +130,13 @@ If you run into problems or have questions, feel free to file a
 [bug]: https://github.com/davidfstr/hbencode/issues
 
 
+## Changelog
+
+Information about earlier releases can be found in the [CHANGELOG].
+
+[CHANGELOG]: https://github.com/davidfstr/hbencode/blob/master/CHANGELOG.md
+
+
 ## License
 
 This software is licensed under the [MIT License].
