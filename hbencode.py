@@ -62,6 +62,9 @@ def main(args):
         --tv
     
     Modifiers:
+        --auto                  Guess all encoding options.
+                                Overrides -s, -B, -a, -q, -C options.
+        
         -S                      Scan only.
         -T, --test              Test encode. First 30 seconds only. Open result file automatically.
         
