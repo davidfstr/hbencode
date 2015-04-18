@@ -1,4 +1,4 @@
-# hbencode 1.0
+# hbencode 1.1
 
 Encodes video files in bulk for playback on an iPhone or iPod Touch 
 (non-retina), optimizing for space.
