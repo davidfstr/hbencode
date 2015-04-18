@@ -57,6 +57,19 @@ When run for the first time:
     * If it cannot be found, you will be prompted to input its location manually.
 2. hbencode will prompt you for a directory to save all output files.
 
+
+### Automatic Mode
+
+If the `--auto` option is specified, all other configuration options are detected automatically.
+
+The particular heuristic for how these options are computed may change in subsequent versions of hbencode without warning. At present the current heuristic is:
+
+* Use an output aspect ratio which is as close to the input aspect ratio as possible.
+* Use constant quality encoding.
+* Use the first Japanese audio track if there is one, or the first one otherwise.
+* Use the first Japanese subtitle track if there is one, or the first one otherwise.
+* If there is a subtitle track, burn it in to the video.
+
 ### Aspect Ratio
 
 The output width, height, and bitrate of the encoded video are determined by
