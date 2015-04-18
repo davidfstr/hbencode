@@ -50,7 +50,7 @@ def main(args):
     print
     
     # Parse arguments
-    opts, args = getopt.getopt(args, 'r:s:a:x:STBq:C', ['vb=', 'tv', 'w1', 'sb', 'test', 'auto'])
+    opts, args = getopt.getopt(args, 'r:s:a:x:STBq:Co:', ['vb=', 'tv', 'w1', 'sb', 'test', 'auto'])
     
     if len(args) == 0:
         exit("""syntax: hbencode.py [<ratio>] [<modifiers>] (FILE ...)
@@ -76,6 +76,8 @@ def main(args):
                                 (HandBrake uses RF 20.0 by default.)
         
         -x EXTRA_ARGS           Passes extra argument(s) to HandBrakeCLI.
+        
+        -o OUTPUT_FILEPATH      Overrides the default output path.
     """)
     
     s = {} # settings
@@ -88,9 +90,9 @@ def main(args):
     s['test'] = False
     s['constant_quality'] = False
     s['extraargs'] = []
+    output_filepath_override = None
     for o, a in opts:
-        if o == '--auto':
-            s['auto'] = True
+        # Ratios
         if o == '-r':
             s['ratio'] = a
             if s['ratio'] not in RATIOS:
@@ -100,6 +102,7 @@ def main(args):
         if o == '--tv':
             s['ratio'] = 'tv'
         
+        # Other options
         if o == '-s':
             s['sub'] = int(a)
         if o == '-a':
@@ -116,6 +119,10 @@ def main(args):
             s['extraargs'].extend(a.split(" "))
         if o == '-S':
             s['extraargs'].append('--scan')
+        if o == '--auto':
+            s['auto'] = True
+        if o == '-o':
+            output_filepath_override = a
     
     # Load preferences
     preferences = load_preferences(PREFERENCES_FILEPATH)
@@ -176,6 +183,8 @@ def main(args):
         srcfilebase = os.path.basename(srcfilepath)
         dstfilebase = srcfilebase.rsplit('.', 1)[0] + '.m4v'
         dstfilepath = os.path.join(DESTDIR, dstfilebase)
+        if output_filepath_override is not None:
+            dstfilepath = output_filepath_override
         
         hbargs = []
         
