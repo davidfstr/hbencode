@@ -1,5 +1,11 @@
 # hbencode 1.1
 
+> **Retired:** This project was originally created as part of my video transcoding
+> pipeline for watching videos from my media center computer from mobile devices
+>  such as my phone. However I now use [VLC Streamer] for that purpose.
+
+[VLC Streamer]: http://hobbyistsoftware.com/vlcstreamer/
+
 Encodes video files in bulk for playback on an iPhone or iPod Touch 
 (non-retina), optimizing for space.
 
